@@ -51,6 +51,19 @@ namespace numerecomplexe
             return rezultat;
         }
 
+        public Complex Power(int pow)
+        {
+            Complex x = new Complex(re, im);
+            Complex rez = new Complex(1);
+            if (pow == 0)
+                return new Complex(1);
+            if (pow == 1)
+                return x;
+            for (int i = 0; i < pow; i++)
+                rez = rez * x;
+
+            return rez;
+        }
         
         // TODO
         public double Real

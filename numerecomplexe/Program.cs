@@ -37,7 +37,9 @@ namespace numerecomplexe
             Complex mult = c1.Multiply(c2);
             Console.WriteLine($"{c1} * {c2} = {mult}");
 
-            Console.WriteLine(c1 + c2);
+            Console.WriteLine(c1 * c1);
+            Console.WriteLine(c1.Power(1));
+            Console.WriteLine(c1^0);
 
         }
     }
