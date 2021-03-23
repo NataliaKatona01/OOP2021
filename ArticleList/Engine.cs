@@ -34,6 +34,14 @@ namespace ArticleList
                 Console.WriteLine(a[i] + "\n");
             }
         }
+        public static void TagsFilter(Article[] articles, string Tag)
+        {
+            Article[] a = Array.FindAll(articles, element => element.Tag.Contains(Tag));
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine(a[i] + "\n");
+            }
+        }
 
         public static void CronologicSort(Article[] art)
         {
@@ -80,6 +88,7 @@ namespace ArticleList
                 }
             }
         }
+
         public static void NumberOfPublicationSort(Author[] a)
         {
             for (int i = 0; i < a.Length - 1; i++)

@@ -15,8 +15,9 @@ namespace ArticleList
         private DateTime update;
         private int likes;
         private int dislikes;
+        private string tag;
 
-        public Article(string title, Author[] author, string content, DateTime date, DateTime update, int likes, int dislikes)
+        public Article(string title, Author[] author, string content, DateTime date, DateTime update, int likes, int dislikes, string tag)
         {
             Title = title;
             Author = author;
@@ -27,6 +28,7 @@ namespace ArticleList
             Update = update;
             Likes = likes;
             Dislikes = dislikes;
+            Tag = tag;
         }
 
         public string Title { get => title; set => title = value; }
@@ -36,13 +38,14 @@ namespace ArticleList
         public int Likes { get => likes; set => likes = value; }
         public int Dislikes { get => dislikes; set => dislikes = value; }
         public Author[] Author { get => author; set => author = value; }
+        public string Tag { get => tag; set => tag = value; }
 
         public override string ToString()
         {
             string authors = "";
             for (int i = 0; i < Author.Length; i++)
                 authors += Author[i] + "; ";
-            return Title + "\n" + authors + "\n" + Content + "\n" + Date;
+            return Title + "\n" + authors + "\n" + Content + "\n" + Date + "\n" + "Tags: " + Tag;
         }
     }
     
