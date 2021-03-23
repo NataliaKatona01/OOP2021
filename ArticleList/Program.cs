@@ -25,8 +25,9 @@ namespace ArticleList
                 " Not anymore. The colossal iceberg finally fractured in late April 2020, spawning a new companion named A-68C.",
                 new DateTime(2020, 5, 3), new DateTime(2020, 5, 4), 412, 12, "Iceberg");
             Article[] art = { b1, b2, b3 };
+
             Engine.TagsFilter(art, "Iceberg");
-          //  Engine.DateFilter(art, new DateTime(2000, 1, 1), new DateTime(2028, 1, 1));
+            //Engine.DateFilter(art, new DateTime(2000, 1, 1), new DateTime(2028, 1, 1));
             //Engine.WeekendFilter(art);
 
             Engine.NumberOfPublicationSort(c1);
@@ -34,7 +35,7 @@ namespace ArticleList
             {
                 Console.WriteLine(c1[i] + "\n");
             }
-            Engine.NrPub(art, new DateTime(2000,1,1), new DateTime(2030,1,1));
+           
         }
     }
 }
